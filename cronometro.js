@@ -6,6 +6,7 @@ let tempo = 1000 //Tempp em segundos
 let cronometro;
 
 function start(){
+    timer()
     cronometro = setInterval( timer , tempo)
     document.querySelector(".start-btn").disabled = true
     document.querySelector(".start-btn").classList.add("disabled")
