@@ -1,18 +1,20 @@
-let horas = 00
-let minutos = 00
-let segundos = 00
+let horas = 0
+let minutos = 0
+let segundos = 0
 
-let tempo = 1000 //definição do tempo em segundos
+let tempo = 1000 //Tempp em segundos
 
 function start(){
     cronometro = setInterval( timer , tempo)
-    let button = document.getElementById("btn-start").disabled = true
-    document.getElementById("btn-start").classList.add("disabled")
-    document.getElementById("btn-stop").classList.add("stopButton")  
+    document.querySelector(".start-btn").disabled = true
+    document.querySelector(".start-btn").classList.add("disabled")
+    document.querySelector(".stop-btn").classList.add("stopButton")  
 }
 function pause(){
     clearInterval(cronometro)
-    document.getElementById("btn-iniciar").disabled = false
+    document.querySelector(".start-btn").disabled = false
+    document.querySelector(".start-btn").classList.remove("disabled")
+    document.querySelector(".stop-btn").classList.remove("stopButton")
 }
 function stop(){
     clearInterval(cronometro)
@@ -21,9 +23,9 @@ function stop(){
     segundos = 0
 
     document.getElementById('cron').innerHTML = "00:00:00"
-    document.getElementById("btn-start").disabled = false
-    document.getElementById("btn-start").classList.remove("disabled")
-    document.getElementById("btn-stop").classList.remove("stopButton")
+    document.querySelector(".start-btn").disabled = false
+    document.querySelector(".start-btn").classList.remove("disabled")
+    document.querySelector(".stop-btn").classList.remove("stopButton")
 }
 
 function timer(){
@@ -41,5 +43,4 @@ function timer(){
     document.getElementById('cron').innerHTML = formatoCron
     return formatoCron
 }
-
 
