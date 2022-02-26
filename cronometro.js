@@ -2,7 +2,7 @@ let horas = 0
 let minutos = 0
 let segundos = 0
 
-let tempo = 1000 //Tempp em segundos
+let tempo = 1000 //Tempo em segundos
 let cronometro;
 
 function start(){
