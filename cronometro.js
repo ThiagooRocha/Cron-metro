@@ -2,7 +2,7 @@ let horas = 00
 let minutos = 00
 let segundos = 00
 
-let tempo = 100
+let tempo = 1000 //definição do tempo em segundos
 
 function start(){
     cronometro = setInterval( timer , tempo)
