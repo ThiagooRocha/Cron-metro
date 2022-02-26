@@ -3,6 +3,7 @@ let minutos = 0
 let segundos = 0
 
 let tempo = 1000 //Tempp em segundos
+let cronometro;
 
 function start(){
     cronometro = setInterval( timer , tempo)
