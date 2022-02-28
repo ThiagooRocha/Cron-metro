@@ -5,6 +5,7 @@ let segundos = 0;
 let tempo = 1000; //Tempo em segundos
 let cronometro;
 let formatoCron = "00:00:00"
+let num = 0;
 
 function start(){
     timer()
@@ -59,11 +60,13 @@ function timer(){
 }
 
 function saveTime(){
+    num++
+
     div = document.querySelector('.saveTime-div')
     let createLi = document.createElement('li')
     let createH1 = document.createElement('h1')
     createLi.innerText = formatoCron
-    createH1.innerText = "Tempo:"
+    createH1.innerText = `Tempo ${num}:`
     
     createH1.classList.add('saveTime-h1') 
     div.appendChild(createH1)
